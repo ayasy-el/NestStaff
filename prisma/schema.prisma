@@ -13,10 +13,38 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+generator nestjsDto {
+  provider                        = "prisma-generator-nestjs-dto"
+  output                          = "../src/employee/dto"
+  outputToNestJsResourceStructure = "false"
+  flatResourceStructure           = "false"
+  exportRelationModifierClasses   = "true"
+  reExport                        = "false"
+  generateFileTypes               = "dto"
+  createDtoPrefix                 = "Create"
+  updateDtoPrefix                 = "Update"
+  dtoSuffix                       = "Dto"
+  entityPrefix                    = ""
+  entitySuffix                    = ""
+  classValidation                 = "true"
+  fileNamingStyle                 = "camel"
+  noDependencies                  = "false"
+  outputType                      = "class"
+  definiteAssignmentAssertion     = "false"
+  requiredResponseApiProperty     = "true"
+  prettier                        = "true"
+  outputApiPropertyType           = "true"
+}
+
 model Employee {
   id        Int      @id @default(autoincrement())
+  /// @example John Doe
+  /// @IsNotEmpty()
   name      String   @unique
+  /// @example johndoe@mail.com
+  /// @IsEmail()
   email     String   @unique
+  /// @IsEnum(Role,{message: 'Valid role required'})
   role      Role
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

@@ -1,18 +1,20 @@
-import { Injectable } from '@nestjs/common';
-import { Prisma } from '@prisma/client';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { DatabaseService } from 'src/database/database.service';
+import { CreateEmployeeDto } from './dto/create-employee.dto';
+import { UpdateEmployeeDto } from './dto/update-employee.dto';
+import { Role } from '@prisma/client';
 
 @Injectable()
 export class EmployeeService {
   constructor(private readonly databaseService: DatabaseService) {}
 
-  async create(createEmployeeDto: Prisma.EmployeeCreateInput) {
+  async create(createEmployeeDto: CreateEmployeeDto) {
     return this.databaseService.employee.create({
       data: createEmployeeDto,
     });
   }
 
-  async findAll(role?: 'INTERN' | 'ENGINEER' | 'ADMIN') {
+  findAll(role?: Role) {
     if (role)
       return this.databaseService.employee.findMany({
         where: {
@@ -23,14 +25,14 @@ export class EmployeeService {
   }
 
   async findOne(id: number) {
-    return this.databaseService.employee.findUnique({
+    return this.databaseService.employee.findUniqueOrThrow({
       where: {
         id,
       },
     });
   }
 
-  async update(id: number, updateEmployeeDto: Prisma.EmployeeUpdateInput) {
+  async update(id: number, updateEmployeeDto: UpdateEmployeeDto) {
     return this.databaseService.employee.update({
       where: {
         id,
