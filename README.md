@@ -1,85 +1,81 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# 🏢 Employee Management API
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+![Node.js](https://img.shields.io/badge/Node.js-16.x-brightgreen?style=flat-square) ![NestJS](https://img.shields.io/badge/NestJS-8.x-red?style=flat-square) ![SQLite](https://img.shields.io/badge/SQLite-3.x-blue?style=flat-square) ![Prisma](https://img.shields.io/badge/Prisma-4.x-orange?style=flat-square)
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+An efficient and scalable API built with [NestJS](https://nestjs.com) for managing employee data. This project uses Prisma for database management and SQLite as the default database. 🚀
 
-## Description
+## ✨ Features
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- CRUD operations for employees 👩‍💼👨‍💼
+- SQLite as the database 🗄️
+- Prisma ORM for seamless database interactions 🧑‍💻
+- Global exception handling with custom filters 🎯
+- Swagger API documentation 📑
 
-## Project setup
+## 🛠️ Project Setup
 
 ```bash
+# Install dependencies
 $ pnpm install
+
+# Run database migrations
+$ pnpm prisma migrate dev
+
+# Seed the database
+$ pnpm prisma db seed
 ```
 
-## Compile and run the project
+## 🚀 Running the Project
 
 ```bash
-# development
+# Start the server (development)
 $ pnpm run start
 
-# watch mode
+# Start the server in watch mode
 $ pnpm run start:dev
 
-# production mode
+# Start the server (production)
 $ pnpm run start:prod
 ```
 
-## Run tests
+## 🧪 Running Tests
 
 ```bash
-# unit tests
+# Unit tests
 $ pnpm run test
 
-# e2e tests
+# End-to-end tests
 $ pnpm run test:e2e
 
-# test coverage
+# Test coverage
 $ pnpm run test:cov
 ```
 
-## Resources
+## 📚 API Endpoints
 
-Check out a few resources that may come in handy when working with NestJS:
+You can explore the API documentation using Swagger after starting the server:
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+```
+GET /employees        -> Retrieve all employees
+POST /employees       -> Create a new employee
+GET /employees/:id    -> Retrieve employee by ID
+PATCH /employees/:id  -> Update employee by ID
+DELETE /employees/:id -> Remove employee by ID
+```
 
-## Support
+Access the Swagger UI at: [http://localhost:3000/swagger](http://localhost:3000/swagger)
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+## 📂 Resources
 
-## Stay in touch
+- [NestJS Documentation](https://docs.nestjs.com)
+- [Prisma Documentation](https://www.prisma.io/docs)
+- [Swagger Docs](https://swagger.io/docs/)
+- [Prisma Generator NestJs DTO](https://github.com/Brakebein/prisma-generator-nestjs-dto)
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## ❤️ Support
 
-## License
+If you find this project helpful, consider giving it a ⭐ or contributing!
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+## 📝 License
+
+This project is [MIT licensed](./LICENSE).
