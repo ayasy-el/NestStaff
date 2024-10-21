@@ -10,9 +10,6 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
     .setTitle('Employee API')
-    .setDescription(
-      'Employee API inspired from https://www.youtube.com/watch?v=6He5Gyuuvxk @DaveGray',
-    )
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);
