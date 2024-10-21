@@ -1,8 +1,8 @@
 # 🏢 Employee Management API
 
-![Node.js](https://img.shields.io/badge/Node.js-16.x-brightgreen?style=flat-square) ![NestJS](https://img.shields.io/badge/NestJS-8.x-red?style=flat-square) ![SQLite](https://img.shields.io/badge/SQLite-3.x-blue?style=flat-square) ![Prisma](https://img.shields.io/badge/Prisma-4.x-orange?style=flat-square)
+![Node.js](https://img.shields.io/badge/node-%3E%3D%2018.0.0-brightgreen) ![NestJS](https://img.shields.io/badge/nestjs-%5E10.0.0-red) ![PostgreSQL](https://img.shields.io/badge/postgresql-%5E16.2-blue) ![Prisma](https://img.shields.io/badge/prisma-%5E5.18.0-blueviolet)
 
-An efficient and scalable API built with [NestJS](https://nestjs.com) for managing employee data. This project uses Prisma for database management and SQLite as the default database. 🚀
+An efficient and scalable API built with [NestJS](https://nestjs.com) for managing employee data. This project uses Prisma for database management and PostgreSQL as the default database. 🚀
 
 ![image](https://github.com/user-attachments/assets/26b59139-b8ed-48a7-bd5f-b569c4900abe)
 
@@ -10,7 +10,7 @@ An efficient and scalable API built with [NestJS](https://nestjs.com) for managi
 ## ✨ Features
 
 - CRUD operations for employees 👩‍💼👨‍💼
-- SQLite as the database 🗄️
+- PostgreSQL as the database 🗄️
 - Prisma ORM for seamless database interactions 🧑‍💻
 - Global exception handling with custom filters 🎯
 - Swagger API documentation 📑
