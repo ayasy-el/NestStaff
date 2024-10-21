@@ -4,7 +4,8 @@
 
 An efficient and scalable API built with [NestJS](https://nestjs.com) for managing employee data. This project uses Prisma for database management and SQLite as the default database. 🚀
 
-![image](https://github.com/user-attachments/assets/6b8177d1-0307-4ecc-a709-8df8e881a674)
+![image](https://github.com/user-attachments/assets/26b59139-b8ed-48a7-bd5f-b569c4900abe)
+
 
 ## ✨ Features
 
